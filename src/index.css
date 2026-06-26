@@ -1,0 +1,133 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-secondary text-dark font-sans;
+  }
+
+  h1 {
+    @apply text-4xl font-bold text-dark;
+  }
+
+  h2 {
+    @apply text-3xl font-bold text-dark;
+  }
+
+  h3 {
+    @apply text-2xl font-bold text-dark;
+  }
+
+  h4 {
+    @apply text-xl font-semibold text-dark;
+  }
+
+  p {
+    @apply text-base text-gray-700 leading-relaxed;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply px-6 py-3 bg-primary text-white font-semibold rounded-lg hover:bg-opacity-90 transition-all duration-300;
+  }
+
+  .btn-secondary {
+    @apply px-6 py-3 border-2 border-primary text-primary font-semibold rounded-lg transition-all duration-300;
+  }
+
+  .btn-secondary:hover {
+    @apply bg-primary text-white border-primary;
+  }
+
+  .btn-accent {
+    @apply px-6 py-3 bg-accent text-white font-semibold rounded-lg hover:bg-opacity-90 transition-all duration-300;
+  }
+
+  .btn-secondary {
+    border-color: #F97316 !important;
+    color: #F97316 !important;
+  }
+
+  .btn-secondary:hover {
+    background-color: #F97316 !important;
+    color: #ffffff !important;
+    border-color: #F97316 !important;
+  }
+
+  .input-field {
+    @apply w-full px-4 py-3 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all;
+  }
+
+  .card {
+    @apply bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 p-6;
+  }
+
+  .container-max {
+    @apply max-w-7xl mx-auto px-4;
+  }
+
+  .section-padding {
+    @apply py-16 md:py-24;
+  }
+}
+
+:root {
+  --bs-primary: #F97316;
+  --bs-primary-rgb: 249, 115, 22;
+  --bs-secondary: #F59E0B;
+  --bs-link-color: #F97316;
+  --bs-link-hover-color: #EA580C;
+}
+
+.btn-primary {
+  background-color: #F97316 !important;
+  border-color: #F97316 !important;
+  color: #fff !important;
+}
+
+.text-primary {
+  color: #F97316 !important;
+}
+
+.bg-primary {
+  background-color: #F97316 !important;
+}
+
+.border-primary {
+  border-color: #F97316 !important;
+}
+
+/* Smooth transitions */
+* {
+  @apply transition-colors duration-300;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-secondary;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-primary rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-opacity-80;
+}
